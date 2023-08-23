@@ -1,0 +1,20 @@
+POST http://localhost:3001/produtos
+content-type: application/json
+
+{
+    "name": "Produto 02",
+    "price": 40.00,
+    "description": "Produto 02 funcionando"
+}
+
+###
+
+GET http://localhost:3001/produtos
+
+###
+
+GET http://localhost:3001/produtos/
+
+###
+
+DELETE http://localhost:3001/produtos/35c8fdc4-197c-41ac-8651-863d7a7ef595
