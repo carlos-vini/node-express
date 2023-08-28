@@ -44,6 +44,21 @@ app.delete('/produtos/:id', (request, response) => {
     return response.json({"message": "Produto deletado com Sucesso!"});
 });
 
+app.put("/produtos/:id", (request, response) =>{
+    const { id } = request.params;
+    const {name, price, description} = request.body
+
+    const produtoIndex = produtos.findIndex((produto) => produto.id === id);
+
+    produtos[produtoIndex] = {
+        ...produtos[produtoIndex],
+        name,
+        price,
+        description
+    };
+
+    return response.json({"message": "Produto foi atualizado com sucesso"});
+});
 
 app.listen(3001, () => {
     console.log("Servidor aberto na porta 3001!");
