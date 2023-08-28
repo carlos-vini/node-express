@@ -3,7 +3,7 @@ content-type: application/json
 
 {
     "name": "Produto 02",
-    "price": 40.00,
+    "price": "R$28,90",
     "description": "Produto 02 funcionando"
 }
 
@@ -14,6 +14,17 @@ GET http://localhost:3001/produtos
 ###
 
 GET http://localhost:3001/produtos/
+
+###
+
+PUT http://localhost:3001/produtos/4662c325-53e2-4283-b094-e57611e4d0b2
+content-type: application/json
+
+{
+    "name": "Produto 2.0",
+    "price": "R$32,00",
+    "description": "Produto 02 foi atualizado com sucesso"
+}
 
 ###
 
